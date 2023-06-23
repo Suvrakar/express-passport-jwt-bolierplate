@@ -48,20 +48,17 @@ app.get('/', (req, res) => {
     res.json({"message":"Express is up"});
 });
 
-// Login route - here we will generate the token - copy the token generated in the input
 app.post("/login", function(req, res) {
     if(req.body.email && req.body.password){
       var email = req.body.email;
       var password = req.body.password;
     }
-    // usually this would be a database call:
     var user = users[_.findIndex(users, {email: email})];
     if( ! user ){
       res.status(401).json({message:"no such user/email id found"});
     }
   
     if(user.password === password) {
-      // from now on we'll identify the user by the id and the id is the only personalized value that goes into our token
       var payload = {id: user.id};
       var token = jwt.sign(payload, jwtOptions.secretOrKey);
       res.json({message: "ok", token: token});
@@ -70,12 +67,9 @@ app.post("/login", function(req, res) {
     }
   });
 
-  // now there can be as many route you want that must have the token to run, otherwise will show unauhorized access. Will show success 
-  // when token auth is successfilly passed.
-  app.get("/secret", passport.authenticate('jwt', { session: false }), (req, res) => {
-    res.json("Success! You can not see this without a token");
+  app.get("/protected", passport.authenticate('jwt', { session: false }), (req, res) => {
+    res.json("Protected Route");
   });
   
 
-// server 
 app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
