@@ -3,4 +3,4 @@
 <img src="https://supertokens.com/static/b0172cabbcd583dd4ed222bdb83fc51a/9af93/jwt-structure.png"/>
 
 Preview:
-<img src="[https://ibb.co/DRWNNg6](https://i.ibb.co/wzgTTrb/Screenshot-from-2023-07-18-11-11-31.png)https://i.ibb.co/wzgTTrb/Screenshot-from-2023-07-18-11-11-31.png"/>
+<img src="https://i.ibb.co/wzgTTrb/Screenshot-from-2023-07-18-11-11-31.png"/>
