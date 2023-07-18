@@ -8,3 +8,7 @@
 
 Preview:
 <img src="https://i.ibb.co/wzgTTrb/Screenshot-from-2023-07-18-11-11-31.png"/>
+<br/>
+<img src="https://i.ibb.co/Wx4m033/Screenshot-from-2023-07-18-11-34-05.png"/>
+
+
